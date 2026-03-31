@@ -84,7 +84,18 @@ Targets: Frequently affects healthcare, finance, hospitality, and government sec
 Detection: Identified by MITRE ATT&CK Technique T1105 (Ingress Tool Transfer) and requires Endpoint Detection and Response (EDR) tools or manual removal of malicious processes and registry keys.
 
 ---
+### Botnet attacks 
+A botnet attack is a coordinated cyberattack launched from a network of hijacked internet-connected devices (computers, smartphones, IoT) infected with malware. Controlled remotely by a "bot herder," these devices, or "bots," act in unison to perform large-scale actions such as DDoS attacks, phishing, spam campaigns, data theft, and credential stuffing. 
+Kaspersky
+Kaspersky
+ +3
+How a Botnet Attack Works
+Infection: Attackers (botmasters) infect vulnerable devices using malware via phishing emails, exploited vulnerabilities, or brute-forcing weak passwords, particularly on IoT devices.
+Command & Control (C&C): The infected devices connect back to a server controlled by the attacker, awaiting commands.
+Attack Execution: The botmaster triggers the bots to simultaneously attack a target, hiding the origin of the attack because the traffic comes from legitimate, distributed IP addresses.
+<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0732d38d-362b-481b-940b-76f44e67dd8a" />
 
+---
 ## 🛠️ Framework Logic & Architecture
 
 | Module | Protocol | Core Logic |
