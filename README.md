@@ -40,4 +40,4 @@ SYN Cookies: The server stops allocating resources immediately upon receiving a 
 Dropping Old Half-Open Connections: Clearing the connection queue.
 Rate Limiting: Restricting the number of incoming SYN packets.
 ## Warning : This Repository just for learning purposes not to harm any Organization . 
-## These scripts will gonna create a huge impact in your own Local system every mili second time around 10000 threads will for concurrent attack on website to increase the load of that site dont test without legal permissions
+#### These scripts will gonna create a huge impact in your own Local system every mili second time around 10000 threads will run concurrently and attacks on the website to increase the load of that site dont test without legal permissions
