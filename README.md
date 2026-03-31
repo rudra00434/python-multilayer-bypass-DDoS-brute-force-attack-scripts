@@ -94,6 +94,7 @@ Infection: Attackers (botmasters) infect vulnerable devices using malware via ph
 Command & Control (C&C): The infected devices connect back to a server controlled by the attacker, awaiting commands.
 Attack Execution: The botmaster triggers the bots to simultaneously attack a target, hiding the origin of the attack because the traffic comes from legitimate, distributed IP addresses.
 <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0732d38d-362b-481b-940b-76f44e67dd8a" />
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/67b9dfc6-04e4-4c58-9ee0-ca26bb65f174" />
 
 ---
 ## 🛠️ Framework Logic & Architecture
