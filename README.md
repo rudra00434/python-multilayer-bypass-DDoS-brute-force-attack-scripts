@@ -73,6 +73,15 @@ The Beacon: The infected machine (Client) initiates the connection to the attack
 The "Heartbeat": Instead of staying connected 24/7, it sends a small encrypted packet every 60 seconds. This "asynchronous" behavior mimics normal web browsing, making it very hard for firewalls to distinguish from a person checking their email.
 The Payload: If the attacker has a command waiting (e.g., "Take Screenshot"), the server sends it back in the response to the beacon.
 <img width="876" height="455" alt="image" src="https://github.com/user-attachments/assets/91a85509-801d-483f-93d2-d9d22ba35b7b" />
+The malware operates by embedding itself via phishing emails, malicious attachments, or drive-by downloads, then establishing encrypted communication with a Command-and-Control (C2) server.  It employs advanced stealth techniques such as obfuscation, fileless execution, and anti-sandbox detection to evade security measures, with recent campaigns utilizing Python scripts, TryCloudflare tunnels, and HTML smuggling to bypass antivirus detection. 
+
+Key characteristics and capabilities include:
+
+Functions: Keylogging, remote desktop control, screen recording, audio/video capture, and file exfiltration. 
+Persistence: Achieved through registry key modifications, scheduled tasks, and process injection into legitimate applications (e.g., notepad.exe, RegSvcs.exe). 
+Distribution: Often delivered via spear phishing with ISO files, HTML Application (HTA) files, or disguised batch scripts that download stages from services like AWS S3 or Dropbox. 
+Targets: Frequently affects healthcare, finance, hospitality, and government sectors, with a notable surge in activity targeting US infrastructure and Chinese cybercriminal groups. 
+Detection: Identified by MITRE ATT&CK Technique T1105 (Ingress Tool Transfer) and requires Endpoint Detection and Response (EDR) tools or manual removal of malicious processes and registry keys.
 
 ---
 
