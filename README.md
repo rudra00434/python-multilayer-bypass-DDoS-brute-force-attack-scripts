@@ -39,5 +39,5 @@ Wiley Online Library
 SYN Cookies: The server stops allocating resources immediately upon receiving a SYN, instead sending a cookie in the SYN-ACK to verify the client.
 Dropping Old Half-Open Connections: Clearing the connection queue.
 Rate Limiting: Restricting the number of incoming SYN packets.
-## Warning : This Repository just for learning purposes not to harm any Organization
- 
+## Warning : This Repository just for learning purposes not to harm any Organization . 
+## These scripts will gonna create a huge impact in your own Local system every mili second time around 10000 threads will for concurrent attack on website to increase the load of that site dont test without legal permissions
