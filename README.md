@@ -50,6 +50,31 @@ As an **LLM Engineer**, this module explores the frontier of **Adversarial Machi
 <img width="540" height="321" alt="image" src="https://github.com/user-attachments/assets/2e6640d4-f929-4a2f-86e2-610689cc73f5" />
 
 ---
+### AsyncRAT malware attack
+#### 1. The Delivery & Dropper Phase (Initial Access)
+Malware rarely arrives as a raw .py file. Instead, it is "compiled" or "packed."
+The Dropper: Usually a small Batch or PowerShell script. Its only job is to download the main payload and a "portable" Python interpreter (since most victims don't have Python installed).
+Obfuscation: The code is often "Base64 encoded" or "AES encrypted" within the dropper to hide from basic Anti-Virus (AV) string scanning.
+
+#### 🛡️ 2. The Persistence Mechanism (Survival)
+A RAT is useless if it disappears when the user restarts their computer. AsyncRAT uses several Windows-specific tricks:
+Registry Injection: It adds a path to itself in HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run.
+Scheduled Tasks: It creates a task that triggers every time the user logs in or every 10 minutes if the process is killed.
+Process Ghosting: It might try to inject its code into a legitimate process like svchost.exe or explorer.exe so that when you look at Task Manager, everything looks normal.
+
+#### 🎹 3. The I/O Hooking (Keylogging & Surveillance)
+Using the pynput library you mentioned, the RAT sets up a Hook.
+The Hook: It listens to the Operating System's keyboard buffer. Every time a key is pressed, the OS sends a message; the RAT intercepts this message, records the character, and stores it in a hidden local log file or a memory variable.
+Stealth: Professional RATs wait for the user to open specific windows (like "PayPal" or "Gmail") before they start logging, to save space and remain undetected.
+
+#### 📡 4. The Asynchronous Beaconing (C2 Communication)
+This is the "Async" part of AsyncRAT. Traditional "Bind Shells" are easy to find because they leave a port open. AsyncRAT uses a Reverse Connection.
+The Beacon: The infected machine (Client) initiates the connection to the attacker (Server).
+The "Heartbeat": Instead of staying connected 24/7, it sends a small encrypted packet every 60 seconds. This "asynchronous" behavior mimics normal web browsing, making it very hard for firewalls to distinguish from a person checking their email.
+The Payload: If the attacker has a command waiting (e.g., "Take Screenshot"), the server sends it back in the response to the beacon.
+<img width="876" height="455" alt="image" src="https://github.com/user-attachments/assets/91a85509-801d-483f-93d2-d9d22ba35b7b" />
+
+---
 
 ## 🛠️ Framework Logic & Architecture
 
