@@ -93,7 +93,7 @@ Detection: Identified by MITRE ATT&CK Technique T1105 (Ingress Tool Transfer) an
 | **L7 Engine** | HTTP/HTTPS | `Aiohttp` Non-blocking Concurrency |
 | **Brute Engine** | Auth/API | Multi-threaded Wordlist Iteration |
 | **AI Engine** | A-SGD | Gradient Noise Injection & Model Poisoning |
-
+| **Asynchronous malware** | AsyncRAT malware | concurrent malware attacks  |
 ---
 
 ## 📂 Repository Structure
