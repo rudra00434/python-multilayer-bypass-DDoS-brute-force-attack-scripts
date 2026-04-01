@@ -112,7 +112,8 @@ Attack Execution: The botmaster triggers the bots to simultaneously attack a tar
 ```text
 ├── modules/            
 │   ├── l4_transport/   # SYN/UDP/ICMP flood scripts
-│   ├── l7_app/         # HTTP Get/Post bypass scripts
+│   ├── l7_app/         # HTTPS & HTTP Get/Post bypass scripts
+|   |__C DDos files     # TCP Get/Post bypass scripts
 │   └── ml_adversary/   # A-SGD Poisoning & Gradient tools
 ├── utils/              # Proxy rotators & Wordlist handlers
 ├── .gitignore          # Environment & VENV protection
